@@ -38,6 +38,8 @@
   - [DDD](SoftwareDesign/DDD.md) — 도메인 주도 설계 정리 (6~15장)
   - [OOP 4대 특징](SoftwareDesign/FourPillars.md) — 캡슐화, 상속, 다형성, 추상화
   - [SOLID 원칙](SoftwareDesign/SOLID.md) — SRP, OCP, LSP, ISP, DIP
+- [Dependencies Sample](DI-MultiMoule-Sample/README.md) — TCA의 swift-dependencies를 TaskLocal로 흉내낸 실험 프로젝트
+- [Needle Sample](Needle-Sample/README.md) — Uber Needle DI 프레임워크 학습
 - Xcode
   - DependencyManager
     - [CocoaPods](Xcode/DependencyManager/CocoaPods.md)

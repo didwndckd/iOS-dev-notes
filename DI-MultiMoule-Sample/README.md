@@ -1,6 +1,6 @@
-# DI MultiMoule Sample
+# Dependencies Sample
 
-Swift Package Manager 기반 멀티 모듈 DI 실험 프로젝트입니다.
+TCA(The Composable Architecture)의 [swift-dependencies](https://github.com/pointfreeco/swift-dependencies) 스타일을 `@TaskLocal`로 직접 구현해본 실험 프로젝트입니다. `@Dependency` 대신 `@DI`, `DependencyValues` 대신 `DIValues`라는 이름을 썼습니다.
 
 ## Modules
 
