@@ -6,7 +6,7 @@ iOS 앱의 성능 문제를 **재현 → 측정 → 원인 분석 → 수정 →
 
 | 완료 | 단계 | 주제 | 실습 | 완료 기준 | 레퍼런스 |
 | --- | --- | --- | --- | --- | --- |
-| [ ] | 1 | 측정 환경과 기본 조작 | Profile로 앱 실행, 녹화, 구간 선택, trace 저장 | 원하는 사용자 동작 구간을 다시 찾아 설명할 수 있다 | • [Instruments Tutorials](https://developer.apple.com/tutorials/instruments)<br>• [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/) |
+| [ ] | 1 | [측정 환경과 기본 조작](MeasurementBasics.md) | Profile로 앱 실행, 녹화, 구간 선택, trace 저장 | 원하는 사용자 동작 구간을 다시 찾아 설명할 수 있다 | • [Instruments Tutorials](https://developer.apple.com/tutorials/instruments)<br>• [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/) |
 | [ ] | 2 | CPU 분석: Time Profiler | 반복 계산으로 병목을 만들고 Call Tree에서 찾기 | 비용이 큰 호출 경로와 실제 작업 함수를 구분한다 | • [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/)<br>• [CPU 성능 분석 심화](https://developer.apple.com/videos/play/wwdc2025/308/) |
 | [ ] | 3 | 응답성: Hangs | 메인 스레드에서 오래 걸리는 작업을 실행하고 개선 | 멈춤 구간을 특정하고 원인과 개선 결과를 설명한다 | • [Analyze hangs with Instruments](https://developer.apple.com/videos/play/wwdc2023/10248/)<br>• [메인 스레드 활동 분석 튜토리얼](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity) |
 | [ ] | 4 | 메모리: Allocations | 화면 진입·이탈을 반복하며 살아 있는 객체 추적 | 일시적 증가와 계속 남는 할당을 구분한다 | • [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/)<br>• [iOS Memory Deep Dive](https://developer.apple.com/videos/play/wwdc2018/416/) |
@@ -101,7 +101,6 @@ iOS 앱의 성능 문제를 **재현 → 측정 → 원인 분석 → 수정 →
 2. 화면을 닫아도 객체가 해제되지 않는지 확인한다.
 3. Leaks와 Memory Graph로 소유 관계를 조사한다. Memory Graph는 Xcode의 보조 디버깅 도구다.
 4. 캡처 또는 정리 로직을 수정하고 `deinit`과 살아 있는 객체 수를 확인한다.
-5. Needle 샘플에서 Root·자식 Component·ViewModel의 기대 수명을 적고 실제 수명과 비교한다.
 
 **주의:** Leaks에서 문제가 없다고 모든 객체의 수명이 올바른 것은 아니다. 정상적인 참조 경로로도 객체가 필요 이상으로 오래 유지될 수 있다.
 
