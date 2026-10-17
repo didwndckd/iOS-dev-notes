@@ -2,26 +2,18 @@
 
 iOS 앱의 성능 문제를 **재현 → 측정 → 원인 분석 → 수정 → 재측정**하는 과정을 익힌다. 도구 사용법을 외우는 것보다, 측정 결과를 근거로 원인을 설명하는 것을 목표로 한다.
 
-## 학습 방식
-
-- 빠른 입문: 3일 동안 기본 조작·CPU 분석 → 메모리 분석 → 멈춤 분석을 실습한다. SwiftUI와 Signpost는 선택적으로 1~2일 더 진행한다.
-- 아래 8단계는 전체 학습 범위다. 처음부터 모두 끝낼 필요는 없으며, 반복 실습과 심화 주제는 필요할 때 진행한다.
-- 매 단계에서 문제를 하나씩 만들고 수정 전후를 같은 조건으로 비교한다.
-- 현재 Needle 샘플은 기본 실행과 객체 수명 관찰에 활용한다. 스크롤·이미지 실습은 해당 화면을 추가하거나 Apple 튜토리얼 샘플을 사용한다.
-- 실습 노트와 코드는 필요할 때 추가한다. 우선 이 README의 체크리스트로 진행 상황을 관리한다.
-
 ## 로드맵
 
-| 완료 | 단계 | 주제 | 실습 | 완료 기준 |
-| --- | --- | --- | --- | --- |
-| [ ] | 1 | 측정 환경과 기본 조작 | Profile로 앱 실행, 녹화, 구간 선택, trace 저장 | 원하는 사용자 동작 구간을 다시 찾아 설명할 수 있다 |
-| [ ] | 2 | CPU 분석: Time Profiler | 반복 계산으로 병목을 만들고 Call Tree에서 찾기 | 비용이 큰 호출 경로와 실제 작업 함수를 구분한다 |
-| [ ] | 3 | 응답성: Hangs | 메인 스레드에서 오래 걸리는 작업을 실행하고 개선 | 멈춤 구간을 특정하고 원인과 개선 결과를 설명한다 |
-| [ ] | 4 | 메모리: Allocations | 화면 진입·이탈을 반복하며 살아 있는 객체 추적 | 일시적 증가와 계속 남는 할당을 구분한다 |
-| [ ] | 5 | 메모리 누수와 객체 수명 | 강한 참조 순환을 만들고 Leaks 및 Memory Graph로 추적 | 참조 경로를 설명하고 수정 후 해제를 확인한다 |
-| [ ] | 6 | 화면 성능: Hitches·SwiftUI | 리스트 스크롤과 무거운 뷰 갱신을 측정 | 끊김 구간과 관련 작업을 연결하고 전후를 비교한다 |
-| [ ] | 7 | 구간 계측: Signpost | 데이터 로딩·변환·화면 준비 구간에 표식 추가 | 관심 작업을 타임라인에서 구분하고 소요 시간을 비교한다 |
-| [ ] | 8 | 종합 실습 | 하나의 화면에서 CPU·메모리·응답성 문제 분석 | 재현 절차와 측정 근거가 있는 개선 보고서를 작성한다 |
+| 완료 | 단계 | 주제 | 실습 | 완료 기준 | 레퍼런스 |
+| --- | --- | --- | --- | --- | --- |
+| [ ] | 1 | 측정 환경과 기본 조작 | Profile로 앱 실행, 녹화, 구간 선택, trace 저장 | 원하는 사용자 동작 구간을 다시 찾아 설명할 수 있다 | • [Instruments Tutorials](https://developer.apple.com/tutorials/instruments)<br>• [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/) |
+| [ ] | 2 | CPU 분석: Time Profiler | 반복 계산으로 병목을 만들고 Call Tree에서 찾기 | 비용이 큰 호출 경로와 실제 작업 함수를 구분한다 | • [Getting Started with Instruments](https://developer.apple.com/videos/play/wwdc2019/411/)<br>• [CPU 성능 분석 심화](https://developer.apple.com/videos/play/wwdc2025/308/) |
+| [ ] | 3 | 응답성: Hangs | 메인 스레드에서 오래 걸리는 작업을 실행하고 개선 | 멈춤 구간을 특정하고 원인과 개선 결과를 설명한다 | • [Analyze hangs with Instruments](https://developer.apple.com/videos/play/wwdc2023/10248/)<br>• [메인 스레드 활동 분석 튜토리얼](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity) |
+| [ ] | 4 | 메모리: Allocations | 화면 진입·이탈을 반복하며 살아 있는 객체 추적 | 일시적 증가와 계속 남는 할당을 구분한다 | • [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/)<br>• [iOS Memory Deep Dive](https://developer.apple.com/videos/play/wwdc2018/416/) |
+| [ ] | 5 | 메모리 누수와 객체 수명 | 강한 참조 순환을 만들고 Leaks 및 Memory Graph로 추적 | 참조 경로를 설명하고 수정 후 해제를 확인한다 | • [Detect and diagnose memory issues](https://developer.apple.com/videos/play/wwdc2021/10180/) |
+| [ ] | 6 | 화면 성능: Hitches·SwiftUI | 리스트 스크롤과 무거운 뷰 갱신을 측정 | 끊김 구간과 관련 작업을 연결하고 전후를 비교한다 | • [SwiftUI 성능 분석](https://developer.apple.com/videos/play/wwdc2025/306/)<br>• [Hitches와 렌더 루프](https://developer.apple.com/videos/play/tech-talks/10855/)<br>• [Commit 단계 분석](https://developer.apple.com/videos/play/tech-talks/10856/)<br>• [Render 단계 분석](https://developer.apple.com/videos/play/tech-talks/10857/) |
+| [ ] | 7 | 구간 계측: Signpost | 데이터 로딩·변환·화면 준비 구간에 표식 추가 | 관심 작업을 타임라인에서 구분하고 소요 시간을 비교한다 | • [Measuring Performance Using Logging](https://developer.apple.com/videos/play/wwdc2018/405/) |
+| [ ] | 8 | 종합 실습 | 하나의 화면에서 CPU·메모리·응답성 문제 분석 | 재현 절차와 측정 근거가 있는 개선 보고서를 작성한다 | • [Profile, fix, and verify](https://developer.apple.com/videos/play/wwdc2026/268/)<br>• [Instruments Tutorials](https://developer.apple.com/tutorials/instruments) |
 
 ## 1. 측정 환경과 기본 조작
 
