@@ -46,5 +46,7 @@
     - [Carthage](Xcode/DependencyManager/Carthage.md)
   - [모듈 링크 방식별 구성 실험](Xcode/ModuleCompositionExperiment/README.md) — 모듈을 Static/Dynamic Library·Framework로 구성 시 빌드 산출물 비교
 
-- [Instruments](Instruments/README.md)
+- Instruments
   - [Instruments 도구와 템플릿 가이드](Instruments/1-InstrumentsTools.md)
+  - [Instruments 시작하기 — Time Profiler와 Signpost](Instruments/2-GettingStartedWithInstruments.md)
+  - [Hang 분석 시작하기](Instruments/GettingStartedWithHangAnalysis.md)

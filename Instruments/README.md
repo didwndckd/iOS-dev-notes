@@ -2,13 +2,18 @@
 
 [Apple — Profiling apps using Instruments](https://developer.apple.com/tutorials/instruments)의 챕터와 각 문서의 다음 단계 링크를 따라 학습한다. Apple의 ImageViewer 샘플에서 Hang을 발견하고, 메인 스레드의 작업을 분석하며, 코드를 수정한 결과를 다시 측정하는 흐름이다.
 
+## 기초 문서
+
+1. [Instruments 도구와 템플릿 가이드](1-InstrumentsTools.md)
+2. [Instruments 시작하기 — Time Profiler와 Signpost](2-GettingStartedWithInstruments.md): WWDC19 요약. [한국어 자막 전문](2-1-GettingStartedWithInstruments-WWDC2019-Korean.md)도 함께 참고한다.
+
 ## 로드맵
 
 ### Chapter 1. Hang basics
 
 | 완료 | 순서 | 주제 | 정리할 내용 | 레퍼런스 |
 | --- | --- | --- | --- | --- |
-| [ ] | 1 | Hang 분석 시작하기 | 사용자 입력과 화면 갱신, Hang의 개념, 샘플에서 사용하는 SwiftUI·Swift Concurrency 배경 | • [Getting started with hang analysis](https://developer.apple.com/tutorials/instruments/getting-started-with-hang-analysis) |
+| [x] | 1 | [Hang 분석 시작하기](GettingStartedWithHangAnalysis.md) | 사용자 입력과 화면 갱신, Hang의 개념, 샘플에서 사용하는 SwiftUI·Swift Concurrency 배경 | • [Getting started with hang analysis](https://developer.apple.com/tutorials/instruments/getting-started-with-hang-analysis) |
 | [ ] | 2 | Hang 식별하기 | 샘플의 멈춤 재현, Profile과 Time Profiler 녹화, Hangs 구간 확인, busy·blocked 메인 스레드 구분 | • [Identifying a hang](https://developer.apple.com/tutorials/instruments/identifying-a-hang) |
 
 ### Chapter 2. Busy main thread hangs
