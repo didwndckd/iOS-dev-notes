@@ -1,6 +1,6 @@
-# 측정 환경과 Instruments 기본 조작
+# Instruments 도구와 템플릿 가이드
 
-[Instruments 로드맵](README.md)의 1단계 문서로, Apple 레퍼런스의 측정 환경과 기본 조작 내용을 정리한다.
+[Instruments 로드맵](README.md)의 참고 문서로, Apple 레퍼런스의 측정 환경과 기본 조작, 측정 도구와 템플릿 구성을 정리한다.
 
 ## Instruments와 Profile
 
