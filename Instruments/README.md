@@ -35,7 +35,7 @@
 
 ## 참고 자료
 
-- [Instruments 도구와 템플릿 가이드](InstrumentsGuide.md): 도구 이름과 구성이 궁금할 때 참고하는 기존 문서.
+- [Instruments 도구와 템플릿 가이드](1-InstrumentsTools.md): 도구 이름과 구성이 궁금할 때 참고하는 기존 문서.
 - [Getting Started with Instruments — WWDC19](https://developer.apple.com/videos/play/wwdc2019/411/): Instruments 기본 조작 보충.
 - [Analyze hangs with Instruments — WWDC23](https://developer.apple.com/videos/play/wwdc2023/10248/): Hang 분석과 메인 스레드의 busy·blocked 상태 이해.
 - [Visualize and optimize Swift concurrency — WWDC22](https://developer.apple.com/videos/play/wwdc2022/110350/): Swift Tasks·Swift Actors 분석 보충.
