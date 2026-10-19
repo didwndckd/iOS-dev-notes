@@ -13,7 +13,7 @@
 
 | 완료 | 순서 | 주제 | 정리할 내용 | 레퍼런스 |
 | --- | --- | --- | --- | --- |
-| [x] | 1 | [Hang 분석 시작하기](GettingStartedWithHangAnalysis.md) | 사용자 입력과 화면 갱신, Hang의 개념, 샘플에서 사용하는 SwiftUI·Swift Concurrency 배경 | • [Getting started with hang analysis](https://developer.apple.com/tutorials/instruments/getting-started-with-hang-analysis) |
+| [x] | 1 | [Hang 분석 시작하기](3-GettingStartedWithHangAnalysis.md) | 사용자 입력과 화면 갱신, Hang의 개념, 샘플에서 사용하는 SwiftUI·Swift Concurrency 배경 | • [Getting started with hang analysis](https://developer.apple.com/tutorials/instruments/getting-started-with-hang-analysis) |
 | [ ] | 2 | Hang 식별하기 | 샘플의 멈춤 재현, Profile과 Time Profiler 녹화, Hangs 구간 확인, busy·blocked 메인 스레드 구분 | • [Identifying a hang](https://developer.apple.com/tutorials/instruments/identifying-a-hang) |
 
 ### Chapter 2. Busy main thread hangs

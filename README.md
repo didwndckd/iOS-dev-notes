@@ -49,4 +49,4 @@
 - Instruments
   - [Instruments 도구와 템플릿 가이드](Instruments/1-InstrumentsTools.md)
   - [Instruments 시작하기 — Time Profiler와 Signpost](Instruments/2-GettingStartedWithInstruments.md)
-  - [Hang 분석 시작하기](Instruments/GettingStartedWithHangAnalysis.md)
+  - [Hang 분석 시작하기](Instruments/3-GettingStartedWithHangAnalysis.md)
