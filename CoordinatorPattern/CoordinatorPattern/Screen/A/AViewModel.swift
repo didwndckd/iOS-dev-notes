@@ -1,9 +1,7 @@
 import Combine
 import UIKit
 
-protocol ARouting: AnyObject {
-    func openCamera(allowsEditing: Bool, completion: @escaping (UIImage?) -> Void)
-}
+protocol ARouting: AnyObject, CameraRoute {}
 
 final class AViewModel: ObservableObject {
     let title = "A"
