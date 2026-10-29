@@ -7,10 +7,12 @@
 
 import UIKit
 
-final class AppCoordinator: Coordinator {
+final class AppCoordinator: Coordinator, CoordinatorContainer {
+    var rootViewController: UIViewController { tabbarController }
+    var childCoordinators: [any Coordinator] = []
+
     private let window: UIWindow
     private let tabbarController: UITabBarController
-    private var childCoordinators: [any Coordinator] = []
 
     init(window: UIWindow) {
         self.window = window
@@ -23,8 +25,8 @@ final class AppCoordinator: Coordinator {
         let bNavigationController = UINavigationController()
         let aCoordinator = ACoordinator(navigationController: aNavigationController)
         let bCoordinator = BCoordinator(navigationController: bNavigationController)
-        childCoordinators = [aCoordinator, bCoordinator]
-        childCoordinators.forEach { $0.start() }
+        start(child: aCoordinator)
+        start(child: bCoordinator)
 
         tabbarController.setViewControllers([
             aNavigationController,
