@@ -11,7 +11,7 @@ import SwiftUI
 struct Instruments_SandboxApp: App {
     var body: some Scene {
         WindowGroup {
-            GettingStartedWithInstrumentsView()
+            IdentifyingAHangView()
         }
     }
 }
