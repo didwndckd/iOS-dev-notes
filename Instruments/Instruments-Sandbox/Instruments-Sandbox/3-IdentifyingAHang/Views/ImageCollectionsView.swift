@@ -1,12 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A collection view that displays one row per image category and all images in that category in a horizontally scrolling list.
-*/
-
 import SwiftUI
-
+/// 이미지 카테고리마다 하나의 행을 표시하고, 각 행에서 해당 카테고리의 모든 이미지를 가로로 스크롤할 수 있는 컬렉션 뷰입니다.
 struct ImageCollectionsView: View {
     var images: ImageCollection
     

@@ -1,14 +1,8 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The data model for the image collection to display, which is also responsible for loading the images from disk.
-*/
-
 import Foundation
 
+/// 화면에 표시할 이미지 컬렉션의 데이터 모델로, 디스크에서 이미지를 불러오는 역할도 담당합니다.
 struct ImageCollection {
-    /// Groups the images by types. The key is the name of the group, the value is a collection of images in this group.
+    /// 이미지를 종류별로 묶습니다. 키는 그룹 이름이고, 값은 해당 그룹에 속한 이미지 목록입니다.
     var groupedImages: [String: [ImageFile]] = [:]
     
     static func loadFromStorage() async throws -> ImageCollection {

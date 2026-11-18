@@ -1,16 +1,10 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A wrapper around a single image file URL that provides easy access to the full image or a thumbnail of it.
-*/
 
 import Foundation
 import UIKit
-
+/// 이미지 파일 URL을 감싸서 원본 이미지나 썸네일에 쉽게 접근할 수 있도록 하는 타입입니다.
 struct ImageFile: Identifiable {
     let fileURL: URL
-    /// Maximum thumbnail height in points.
+    /// 썸네일의 최대 높이입니다. 단위는 포인트입니다.
     static let maxThumbnailHeight: CGFloat = 50
     
     var id: URL {

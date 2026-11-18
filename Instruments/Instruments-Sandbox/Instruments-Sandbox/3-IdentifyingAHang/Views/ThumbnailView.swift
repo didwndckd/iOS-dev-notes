@@ -1,12 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A small view, responsible for showing the thumbnail of a single image.
-*/
-
 import SwiftUI
-
+/// 이미지 한 장의 썸네일을 표시하는 작은 뷰입니다.
 struct ThumbnailView: View {
     @Environment(\.displayScale) private var displayScale: CGFloat
     let imageFile: ImageFile

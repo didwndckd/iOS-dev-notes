@@ -1,12 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The list view of the app, which displays the names of images grouped by category.
-*/
-
 import SwiftUI
-
+/// 카테고리별로 묶인 이미지 이름을 표시하는 앱의 목록 뷰입니다.
 struct ImagesListView: View {
     var images: ImageCollection
     

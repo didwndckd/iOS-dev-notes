@@ -1,12 +1,5 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-The main interface of the app, which declares a tab bar with a list view and a collection view.
-*/
-
 import SwiftUI
-
+/// 목록 뷰와 컬렉션 뷰를 전환하는 탭 바를 정의하는 앱의 메인 화면입니다.
 struct IdentifyingAHangView: View {
     @State private var images: Result<ImageCollection, Error>? = nil
     @State private var selectedTab: Tab = .list
