@@ -20,7 +20,7 @@
 
 | 완료 | 순서 | 주제 | 정리할 내용 | 레퍼런스 |
 | --- | --- | --- | --- | --- |
-| [ ] | 3 | 메인 스레드 활동 분석 | Profile 뷰와 호출 경로를 읽고 CPU 시간을 많이 사용하는 작업 찾기 | • [Analyzing main thread activity](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity) |
+| [x] | 3 | [메인 스레드 활동 분석](5-AnalyzingMainThreadActivity.md) | Profile 뷰와 호출 경로를 읽고 CPU 시간을 많이 사용하는 작업 찾기 | • [Analyzing main thread activity](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity) |
 | [ ] | 4 | 실행 빈도 이해 | 한 번의 실행 비용과 반복 실행 비용의 차이, Time Profiler 샘플만으로 실행 횟수를 알 수 없는 이유 | • [Determining execution frequency](https://developer.apple.com/tutorials/instruments/determining-execution-frequency) |
 | [ ] | 5 | 메인 스레드 작업량 줄이기 | View Body 실행 횟수 측정, LazyHStack 적용, 줄어든 Hang과 스크롤 중 발생하는 Hitch 확인 | • [Reducing main thread work by doing less](https://developer.apple.com/tutorials/instruments/reducing-main-thread-work-by-doing-less) |
 | [ ] | 6 | 작업을 비동기로 실행하기 | 썸네일 계산을 비동기로 변경한 결과, 화면 전환 이후에도 남는 메인 스레드 작업과 Hang | • [Executing work asynchronously](https://developer.apple.com/tutorials/instruments/executing-work-asynchronously) |

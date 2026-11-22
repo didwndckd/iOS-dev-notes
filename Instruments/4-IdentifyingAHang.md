@@ -48,7 +48,7 @@ Time Profiler 템플릿에는 여러 instrument가 함께 포함된다. **Time P
 프로세스 전체의 CPU 사용량에는 여러 스레드의 활동이 합산된다. Hang을 분류하려면 입력을 처리하는 메인 스레드만 따로 봐야 한다.
 
 1. 앱의 프로세스 트랙 옆 펼침 삼각형을 눌러 스레드별 하위 트랙을 연다. 로컬 프로젝트에서는 원문의 `ImageViewer` 대신 실습 앱 이름으로 표시된다.
-2. **Severe Hang** 구간을 Control-click하고 **Set Inspection Range**를 선택한다. 분석 범위를 Hang의 시작부터 끝까지로 제한한다.
+2. **Severe Hang** 구간을 Control(⌃)-click하고 **Set Inspection Range**를 선택한다. 분석 범위를 Hang의 시작부터 끝까지로 제한한다.
 3. **Main Thread** 트랙을 선택한다. 시간 범위와 스레드 범위를 동시에 좁힌 상태가 된다.
 4. 필요하면 **View > Zoom > Zoom to Inspection Range**로 확대한다. 그래프에 포인터를 올려 CPU 사용량을 확인한다.
 
@@ -116,6 +116,6 @@ var imageView: Image {
 
 ## 다음 단계
 
-[Analyzing main thread activity](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity)에서 같은 Hang 구간의 Profile 뷰와 호출 경로를 읽고, CPU 시간을 많이 사용하는 함수를 찾는다.
+[메인 스레드 활동 분석](5-AnalyzingMainThreadActivity.md)에서 같은 Hang 구간의 Profile 뷰와 호출 경로를 읽고, CPU 시간을 많이 사용하는 함수를 찾는다.
 
 [이전: Hang 분석 시작하기](3-GettingStartedWithHangAnalysis.md) · [Instruments 로드맵으로 돌아가기](README.md)
