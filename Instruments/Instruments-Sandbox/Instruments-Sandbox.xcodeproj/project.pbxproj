@@ -33,7 +33,7 @@
 		315084593083E6CF00C190F7 /* Instruments-Sandbox */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			explicitFolders = (
-				"3-IdentifyingAHang/Images",
+				"4-IdentifyingAHang/Images",
 			);
 			path = "Instruments-Sandbox";
 			sourceTree = "<group>";
