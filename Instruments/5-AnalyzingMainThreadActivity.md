@@ -96,7 +96,7 @@ ThumbnailView.body
 
 이번 단계에서 확보한 것은 **CPU 시간이 집중된 앱 코드 위치와 호출 경로**다. 함수의 누적 비용이 크다는 사실만으로 근본 원인이나 수정 방법이 확정되지는 않는다.
 
-다음 [Determining execution frequency](https://developer.apple.com/tutorials/instruments/determining-execution-frequency)에서는 한 번의 실행 비용과 실행 횟수를 구분하고 개선 방향을 판단한다. 다음 실습을 이어갈 때는 Instruments 문서를 열어 두고 기기 연결을 유지하면 설정을 재사용할 수 있다.
+다음 [실행 빈도 이해하기](6-DeterminingExecutionFrequency.md)에서는 한 번의 실행 비용과 실행 횟수를 구분하고 개선 방향을 판단한다. 다음 실습을 이어갈 때는 Instruments 문서를 열어 두고 기기 연결을 유지하면 설정을 재사용할 수 있다.
 
 이미지 출처: [Apple — Analyzing main thread activity](https://developer.apple.com/tutorials/instruments/analyzing-main-thread-activity). 원문의 라이트 모드 2배율 이미지 3개를 로컬에 저장하고 표시 너비를 550~600px로 제한했다. 이미지 저작권은 Apple에 있다.
 
