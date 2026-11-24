@@ -44,7 +44,11 @@ UI를 직접 변경하는 작업은 메인 스레드에서 수행해야 하지�
 
 ## 2. 측정 전에 예상 호출 횟수 세우기
 
-원문 샘플에는 이미지 파일이 129개 있다. 처음 Collection 화면에서 일부라도 보이는 썸네일은 iPhone 12 mini에서 30개, iPhone 15에서 33개다. 화면에 처음 필요한 작업량과 전체 데이터량을 비교하면 측정값이 과도한지 판단할 기준이 생긴다.
+> Apple 튜토리얼의 **ImageViewer 샘플 앱**은 `Images` 폴더의 이미지 파일 129개를 썸네일로 표시한다.
+>
+> 로컬 프로젝트에서는 [4-IdentifyingAHang/Images](Instruments-Sandbox/Instruments-Sandbox/4-IdentifyingAHang/Images/)에 해당하며, `City`, `Flowers`, `Food`, `Landscapes`, `Plants`, `Textures` 카테고리로 구성되어 있다.
+
+처음 Collection 화면에서 일부라도 보이는 썸네일은 iPhone 12 mini에서 30개, iPhone 15에서 33개다. 화면에 처음 필요한 작업량과 전체 데이터량을 비교하면 측정값이 과도한지 판단할 기준이 생긴다.
 
 - 약 30~33회: 초기 화면에 보이는 썸네일 수와 비슷한 수준이다.
 - 화면에 필요한 수보다 훨씬 많음: 화면 밖 썸네일까지 미리 계산하는지 조사한다.
@@ -97,7 +101,17 @@ UI를 직접 변경하는 작업은 메인 스레드에서 수행해야 하지�
 
 **Samples 열의 숫자는 호출 횟수가 아니다.** 값이 2라는 것은 해당 함수가 포함된 스택을 두 샘플에서 관측했다는 뜻이다. 샘플 수가 많아지면 추정 오차가 완화될 수 있지만, 호출 횟수를 알아내는 방식으로 바뀌지는 않는다.
 
-CPU Usage 트랙을 선택한 뒤 Detail Area를 **Samples**로 전환하면 개별 샘플을 볼 수 있다. Call Tree의 Samples 열도 표시할 수 있지만, 어느 쪽도 함수의 진입·종료 이벤트를 제공하지는 않는다.
+원문 튜토리얼에서는 CPU Usage 트랙을 선택한 뒤 Detail Area를 **Samples**로 전환해 개별 샘플을 확인한다. Call Tree의 Samples 열도 표시할 수 있지만, 어느 쪽도 함수의 진입·종료 이벤트를 제공하지는 않는다.
+
+> **Instruments 27.2에서 Samples 메뉴가 안 보일 때**
+>
+> - 이번 실습 환경의 Detail Area 메뉴에는 `Profile`과 `Summary: CPU Usage`만 표시됨. 원문의 `Samples` 메뉴를 계속 찾을 필요 없음.
+> - 오른쪽 **Inspector**의 `Timestamp`, `Core`, `Backtrace`로 선택한 시점의 샘플 정보 확인. 실습 화면에서도 해당 정보 표시 확인.
+> - Inspector 열기: **View → Show Inspector** 또는 창 오른쪽 상단의 사이드바 모양 버튼. instrument가 아닌 정보 패널이므로 **Next Recording에서 추가할 필요 없음**.
+> - **Flame Graph와 Samples는 다른 기능**. Flame Graph는 여러 샘플을 호출 경로별로 집계한 그래프이며, 가로축은 실행 시간 순서가 아님. 실제 호출 횟수·개별 실행 시간 확인 불가.
+> - 공식 확인 범위: Instruments 27의 Inspector 추가와 개별 Backtrace 표시. 기존 Samples 목록의 삭제·완전 대체 여부는 미확인.
+>
+> 참고: [Apple — Xcode 27 Release Notes, Instruments](https://developer.apple.com/documentation/xcode-release-notes/xcode-27-release-notes)
 
 출처: [Determine how often a function executes](https://developer.apple.com/tutorials/instruments/determining-execution-frequency#Determine-how-often-a-function-executes).
 
